@@ -1,0 +1,51 @@
+[
+  {
+    "id": "home",
+    "title": "For Home",
+    "products": [
+      { "img": "home1.png", "productName": "Witcle Wet Tissue", "description": "Reusable and washable innovative wet tissue", "origin": "Korea" },
+      { "img": "home2.png", "productName": "Flolette", "description": "Floral all-in-one detegernt", "origin": "Korea" },
+      { "img": "home3.png", "productName": "Bubble Cleaner", "description": "Multi purpose bubble cleaner", "origin": "Korea" },
+      { "img": "home4.png", "productName": "Octopus Clothes Dryer", "description": "Easy to move, sleek designed clothes dryer", "origin": "Korea" },
+      { "img": "home5.png", "productName": "Washing Machine Tub Cleaner", "description": "Essential Once-A-Month Washing Machine Tub Cleaner", "origin": "Korea" },
+      { "img": "home6.png", "productName": "Dishwasher Detergent", "description": "Heart-shaped Dishwasher Detergent for Fruits and Vegetables", "origin": "Korea" },
+      { "img": "home7.png", "productName": "Detergent", "description": "Washing Liquid for Fruits and Vegetables", "origin": "Korea" }
+    ]
+  },
+  {
+    "id": "table",
+    "title": "For Table",
+    "products": [
+      { "img": "table1.png", "productName": "Rim Plate", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
+      { "img": "table2.png", "productName": "Flora Oval", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
+      { "img": "table3.png", "productName": "Pewter Rim", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
+      { "img": "table4.png", "productName": "Table Clothes Drier", "description": "Foldable Table Clothes Drier Under Cabinet", "origin": "Korea" },
+      { "img": "table5.png", "productName": "Wood Stand for hot pot", "description": "Sleek modern design with foldable functionality", "origin": "Korea" },
+      { "img": "table6.png", "productName": "Food Containers", "description": "Highend Food Containers", "origin": "Japan" },
+      { "img": "table7.png", "productName": "UnderT Dishcloth", "description": "Washable Dishcloth with Innovative Material", "origin": "Korea" }
+    ]
+  },
+  { "id": "pantry", "title": "For Pantry", "products": [
+    { "img": "pantry1.png", "productName": "La Conviette Portion Butter", "description": "AOP certified No.1 French butter", "origin": "France"},
+    { "img": "pantry2.png", "productName": "Paysan Breton Portion Butter", "description": "AOP certified French Butter", "origin": "France" },
+    { "img": "pantry3.png", "productName": "Croissant - Ready to bake", "description": "Light, flaky abd crispy French Butter Croissant", "origin": "France" },
+    { "img": "pantry4.png", "productName": "Pasta Series", "description": "Famous Italian Pastas with various ingredients", "origin": "Italia" }
+  ] },
+  { "id": "well", "title": "For Well", "products": [
+    { "img": "well1.png", "productName": "Fancle - Supplements For Women", "description": "Multivitamin For 20s, 30s, 40s and 50s", "origin": "Japan" },
+    { "img": "well2.png", "productName": "Fancle - Supplements For Women", "description": "Multivitamin For 20s, 30s, 40s and 50s", "origin": "Japan" }
+  ] },
+  { "id": "style", "title": "For Style", "products": [
+    { "img": "style1.png", "productName": "Polo Cotton Cardigan", "description": "2025 S/S Polo Cardigan for Women", "origin": "USA" },
+    { "img": "style2.png", "productName": "Nike Round T-Shirt", "description": "2025 S/S Nike Unisex Sportwear", "origin": "Vietnam" }
+  ] },
+  { "id": "gift", "title": "For Gift", "products": [
+    { "img": "gift1.png", "productName": "Olive Oil Set", "description": "Gift-ready Set with essential oil flovours", "origin": "Italy" },
+    { "img": "gift2.png", "productName": "SoleFrutte Jams", "description": "Gift-ready Set with popular tastes", "origin": "Italy" }
+  ] },
+  { "id": "skin", "title": "For Skin", "products": [
+    { "img": "skin1.png", "productName": "Arcaya Ampoules", "description": "No.1 Esthetics Brand", "origin": "German" },
+    { "img": "skin2.png", "productName": "Needle Shot", "description": "Revitalizing with Needling", "origin": "Korea" },
+    { "img": "skin3.png", "productName": "Max Glow Mask Pack", "description": "Innovative Revitalizing Mask Pack", "origin": "Korea" }
+  ] }
+]
