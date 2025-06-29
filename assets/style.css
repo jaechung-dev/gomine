@@ -62,7 +62,7 @@ nav a {
   border-radius: 12px;
   transition: background-color 0.3s;
   font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-image: url('board.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -376,31 +376,66 @@ footer {
   }
 }
 
-.mobile-close {
+
+
+/* Default: hide mobile version */
+.nav-mobile {
   display: none;
-  font-size: 2rem;
-  color: #5d4b3c;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-.nav-row {
+/* Default: show desktop version */
+.nav-desktop {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Mobile view only */
 @media (max-width: 1280px) {
+  /* Override for ALL mobile nav links, including Home */
+    .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-mobile aa:not(.mobile-close) {
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    margin: 6px 0;
+    background-image: url('board.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+  }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-row a {
+    flex: none; /* make sure they don’t stretch weirdly */
+  }
+
   .mobile-close {
     display: block;
-    font-size: 2rem;
-    line-height: 1;
-    margin-left: auto;
-    background: none;
     width: auto;
     height: auto;
-    background-image: none;
+    line-height: normal;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #5d4b3c;
+    cursor: pointer;
+    padding-right: 40px;
     font-family: initial;
-    padding-right: 35px;
   }
 }

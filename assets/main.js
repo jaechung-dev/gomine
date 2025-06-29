@@ -4,39 +4,46 @@ fetch("navbar.html")
   .then(html => {
     document.getElementById("navbar").innerHTML = html;
 
-    // After navbar is loaded, activate hamburger and overlay
+    // Re-select elements after HTML is injected
     const hamburger = document.getElementById("hamburger");
     const nav = document.getElementById("nav-links");
     const overlay = document.getElementById("navOverlay");
     const mobileClose = document.getElementById("mobile-close");
 
-    hamburger.onclick = () => {
-      nav.classList.toggle("open");
-      overlay.classList.toggle("active");
-    };
-
-    overlay.onclick = () => {
+    function closeMenu() {
       nav.classList.remove("open");
       overlay.classList.remove("active");
-    };
+    }
 
-    mobileClose.onclick = () => {
-      nav.classList.remove("open");
-      overlay.classList.remove("active");
-    };
+    if (hamburger && nav && overlay) {
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", closeMenu);
+
+      if (mobileClose) {
+        mobileClose.addEventListener("click", closeMenu);
+      }
+    }
   });
+
+// Footer
 fetch("footer.html")
   .then(res => res.text())
   .then(html => {
     document.getElementById("footer").innerHTML = html;
   });
-// Initialize Swiper
+
+// Swiper
 const swiper = new Swiper(".swiper", {
   loop: true,
   pagination: { el: ".swiper-pagination" },
   autoplay: { delay: 3000 },
 });
 
+// Catalog
 let productCatalog = [];
 
 fetch("assets/productCatalog.json")
@@ -49,21 +56,26 @@ fetch("assets/productCatalog.json")
 
 const productGrid = document.querySelector('.product-grid');
 
-productGrid.addEventListener('click', (e) => {
-  if (productCatalog.length === 0) return; // wait for fetch
+if (productGrid) {
+  productGrid.addEventListener('click', (e) => {
+    if (productCatalog.length === 0) return;
 
-  const img = e.target.closest('img');
-  if (!img) return;
+    const img = e.target.closest('img');
+    if (!img) return;
 
-  const alt = img.getAttribute('alt')?.trim().toLowerCase();
-  const category = productCatalog.find(c => c.id === alt);
-  if (!category) return;
+    const alt = img.getAttribute('alt')?.trim().toLowerCase();
+    const category = productCatalog.find(c => c.id === alt);
+    if (!category) return;
 
-  openProductModal(category.products);
-});
+    openProductModal(category.products);
+  });
+}
 
 function openProductModal(productArray) {
   const modalBody = document.getElementById("modal-body");
+  const modalOverlay = document.getElementById("product-modal-overlay");
+  if (!modalBody || !modalOverlay) return;
+
   modalBody.innerHTML = productArray.map(product => `
     <div class="product-card">
       <img class="product-card-img" src="assets/products/${product.img}" alt="${product.productName}" />
@@ -74,36 +86,40 @@ function openProductModal(productArray) {
         <hr>
       </div>
     </div>
-  `).join(''); // this is all you need
+  `).join('');
 
   modalOverlay.classList.remove("hidden");
   requestAnimationFrame(() => modalOverlay.classList.add("show"));
 }
 
-const modalOverlay = document.getElementById("product-modal-overlay");
-const modalClose = document.querySelector(".modal-close");
-
 function closeModal() {
+  const modalOverlay = document.getElementById("product-modal-overlay");
+  if (!modalOverlay) return;
+
   modalOverlay.classList.remove("show");
   setTimeout(() => {
     modalOverlay.classList.add("hidden");
-    document.getElementById("modal-body").innerHTML = "";
-  }, 300); // Match transition time
-
+    const modalBody = document.getElementById("modal-body");
+    if (modalBody) modalBody.innerHTML = "";
+  }, 300);
 }
 
-(function () {
-  modalClose.addEventListener("click", closeModal);
+document.addEventListener("click", (e) => {
+  const modalOverlay = document.getElementById("product-modal-overlay");
+  if (!modalOverlay) return;
 
-  modalOverlay.addEventListener("click", (e) => {
-    if (e.target === modalOverlay) {
-      closeModal();
-    }
-  });
+  if (e.target.matches(".modal-close")) {
+    closeModal();
+  }
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modalOverlay.classList.contains("hidden")) {
-      closeModal();
-    }
-  });
-})();
+  if (e.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  const modalOverlay = document.getElementById("product-modal-overlay");
+  if (e.key === "Escape" && modalOverlay && !modalOverlay.classList.contains("hidden")) {
+    closeModal();
+  }
+});
