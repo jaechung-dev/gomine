@@ -401,18 +401,18 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .nav-mobile aa:not(.mobile-close) {
+ 
+  .nav-mobile a {
     width: 140px;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     font-size: 1.2rem;
     margin: 6px 0;
-    background-image: url('board.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: none; /* ✅ Remove background image */
+    background-color: transparent; /* optional: ensures no background */
     display: inline-block;
   }
+  
 
   .nav-row {
     display: flex;
@@ -435,7 +435,7 @@ footer {
     border: none;
     color: #5d4b3c;
     cursor: pointer;
-    padding-right: 40px;
+    padding-right: 10px;
     font-family: initial;
   }
 }
