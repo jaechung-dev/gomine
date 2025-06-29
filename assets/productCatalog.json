@@ -6,7 +6,6 @@
       { "img": "home1.png", "productName": "Witcle Wet Tissue", "description": "Reusable and washable innovative wet tissue", "origin": "Korea" },
       { "img": "home2.png", "productName": "Flolette", "description": "Floral all-in-one detegernt", "origin": "Korea" },
       { "img": "home3.png", "productName": "Bubble Cleaner", "description": "Multi purpose bubble cleaner", "origin": "Korea" },
-      { "img": "home4.png", "productName": "Octopus Clothes Dryer", "description": "Easy to move, sleek designed clothes dryer", "origin": "Korea" },
       { "img": "home5.png", "productName": "Washing Machine Tub Cleaner", "description": "Essential Once-A-Month Washing Machine Tub Cleaner", "origin": "Korea" },
       { "img": "home6.png", "productName": "Dishwasher Detergent", "description": "Heart-shaped Dishwasher Detergent for Fruits and Vegetables", "origin": "Korea" },
       { "img": "home7.png", "productName": "Detergent", "description": "Washing Liquid for Fruits and Vegetables", "origin": "Korea" }
@@ -16,9 +15,7 @@
     "id": "table",
     "title": "For Table",
     "products": [
-      { "img": "table1.png", "productName": "Rim Plate", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
-      { "img": "table2.png", "productName": "Flora Oval", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
-      { "img": "table3.png", "productName": "Pewter Rim", "description": "Vasana Pewter Dish Series", "origin": "Thailand" },
+      { "img": "table1.png", "productName": "Pewter Dishes", "description": "Pewter Dish Series", "origin": "Thailand" },
       { "img": "table4.png", "productName": "Table Clothes Drier", "description": "Foldable Table Clothes Drier Under Cabinet", "origin": "Korea" },
       { "img": "table5.png", "productName": "Wood Stand for hot pot", "description": "Sleek modern design with foldable functionality", "origin": "Korea" },
       { "img": "table6.png", "productName": "Food Containers", "description": "Highend Food Containers", "origin": "Japan" },

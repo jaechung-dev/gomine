@@ -2,37 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GoMine | Home</title>
-  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header id="navbar"></header>
 
-  <!-- Swiper Banner -->
-  <section class="swiper-container swiper">
-    <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="assets/banner_1.png" alt="Cleaners" /></div>
-    <div class="swiper-slide"><img src="assets/banner_2.png" alt="Saucer" /></div>
-    <div class="swiper-slide"><img src="assets/banner_3.png" alt="Cosmetics" /></div>
-    <div class="swiper-slide"><img src="assets/banner_4.png" alt="Foods" /></div>
+<header id="navbar">
+  <div class="nav-container">
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="business.html">Business Area</a>
+      <a href="products.html">Products</a>
+      <a href="group-buying.html">Group Buying</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div id="hamburger">&#9776;</div>
+  </div>
+</header>
 
+<!-- Overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero-split">
+  <div class="hero-text">
+    <div class="hero-text-overlay">
+      <h1 class="hero-logo">Gomine</h1>
+      <p class="hero-tagline">We sell quality products that enrich your lifestyle and connect communities through trust and value.</p>
+      <a href="products.html" class="hero-button">Explore Products</a>
     </div>
-    <div class="swiper-pagination"></div>
-  </section>
+  </div>
+  <div class="hero-carousel">
+    <div class="hero-carousel-frame">
+      <div class="swiper-container swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/banner_1.png" alt="Cleaners" /></div>
+          <div class="swiper-slide"><img src="assets/banner_2.png" alt="Saucer" /></div>
+          <div class="swiper-slide"><img src="assets/banner_3.png" alt="Cosmetics" /></div>
+          <div class="swiper-slide"><img src="assets/banner_4.png" alt="Foods" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="cta">
-    <h1>Explore GoMine</h1>
-    <p>We sell quality products that enrich your lifestyle and connect communities through trust and value.</p>
-    <a href="products.html" class="cta-button">Explore Products</a>
-  </section>
+<div id="footer"></div>
 
-  <footer>
-    <p>&copy; 2025 GoMine Pty Ltd</p>
-  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="assets/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>

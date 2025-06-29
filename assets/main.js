@@ -4,12 +4,32 @@ fetch("navbar.html")
   .then(html => {
     document.getElementById("navbar").innerHTML = html;
 
-    // After navbar is loaded, activate hamburger
-    document.getElementById("hamburger").onclick = () => {
-      document.getElementById("nav-links").classList.toggle("open");
+    // After navbar is loaded, activate hamburger and overlay
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav-links");
+    const overlay = document.getElementById("navOverlay");
+    const mobileClose = document.getElementById("mobile-close");
+
+    hamburger.onclick = () => {
+      nav.classList.toggle("open");
+      overlay.classList.toggle("active");
+    };
+
+    overlay.onclick = () => {
+      nav.classList.remove("open");
+      overlay.classList.remove("active");
+    };
+
+    mobileClose.onclick = () => {
+      nav.classList.remove("open");
+      overlay.classList.remove("active");
     };
   });
-
+fetch("footer.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("footer").innerHTML = html;
+  });
 // Initialize Swiper
 const swiper = new Swiper(".swiper", {
   loop: true,
@@ -51,6 +71,7 @@ function openProductModal(productArray) {
         <h2>${product.productName}</h2>
         <p>${product.description}</p>
         <p class="origin"><strong>Origin:</strong> ${product.origin}</p>
+        <hr>
       </div>
     </div>
   `).join(''); // this is all you need
